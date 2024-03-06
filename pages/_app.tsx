@@ -24,8 +24,9 @@ import * as Fathom from 'fathom-client'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import posthog from 'posthog-js'
-
+import ReactGA from 'react-ga';
 import { bootstrap } from 'lib/bootstrap-client'
+ReactGA.initialize('G-EFS6YVH940');
 import {
   isServer,
   fathomId,

@@ -1,11 +1,14 @@
 import * as React from 'react'
 
 import styles from './styles.module.css'
+import useAnalyticsEventTracker from 'pages/useAnalyticsEventTracker'
 
 export const GitHubShareButton: React.FC = () => {
+  const gaEventTracker = useAnalyticsEventTracker('Contact us');
   return (
     <a
       href='https://github.com/Jing0001?tab=repositories'
+      onClick={()=>gaEventTracker('call')}
       target='_blank'
       rel='noopener noreferrer'
       className={styles.githubCorner}
